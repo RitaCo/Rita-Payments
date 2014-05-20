@@ -1,0 +1,24 @@
+{
+    "name": "Payments",
+    "version": "7.0.0",
+    "description": "Payments Manager Module",
+    "type": "Plugin/Module",
+    "homepage": "https://github.com/RitaCo/Rita-Payments",
+    "author": "Mohammad Saleh Souzanchi <saleh.souzanchi@gmail.com> (http://soozanchi.ir/)",
+    "contributors": [],
+    "keywords": [],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/RitaCo/Rita-Payments.git"
+    },
+    "bugs": {
+        "url": "https://github.com/RitaCo/Rita-Payments/issues"
+    },
+    "licenses" : "MIT",
+    "devDependencies": {
+    },
+    "require": {
+        "php": ">=5.3.0",
+        "rita": "7.0.0"
+    }
+}
