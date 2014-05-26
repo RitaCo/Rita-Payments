@@ -1,7 +1,14 @@
 <?php
 
+if (!defined('PAYMENTS_DIR')) {
+	define('PAYMENTS_DIR', (dirname(dirname(__FILE__))) . DS );
+}
+
+// load RitaPayment Class 
+include PAYMENTS_DIR . 'Lib' . DS . 'RitaPayment.php';
+
  
-RitaRouter::isStation('admin',function() {
+ RitaRouter::isStation('admin',function() {
 	
 	RitaEvent::on('Rita.doshboard',function($event){
 		$name = $event->data['name'];
@@ -9,32 +16,22 @@ RitaRouter::isStation('admin',function() {
 			case 'welcome':
 				//$event->result[] = 'UserManager.dashboard-report';
 				break;
-			case 'ritaServicePanel':
+			case 'ritaControlPanel':
 			case 'Payemts':
 				$event->result['Payemts'] = array(
-					'title'=> 'مدیریت فونت',
-					'icon'	=> 'user-icon-people18',
+					'title'=> 'مدیریت پرداخت',
+					'icon'	=> 'icon-dollarsquare',
 					'order' => 1,
 					'items' => array(
 						array(
-							'title' => 'فونت ها',
-							'icon'	=> ' icon-fontcase',
-							'url'	=> 'cp.fs.fonts'
-						),
-						array(
-							'title' => 'فایل',
-							'icon'	=> ' icon-importfile',
-							'url'	=> 'cp.fs.files'
-						),
-						array(
-							'title' => 'پروفایل طراحان',
-							'icon'	=> 'icon-design',
+							'title' => 'پرداخت ها',
+							'icon'	=> 'icon-dollar',
 							'url'	=> 'cp.fs.members'
 						),						
 						array(
-							'title' => 'دسته بندی',
-							'icon'	=> 'icon-stacks',
-							'url'	=> 'cp.fs.cats'
+							'title' => 'دروازه‌های پرداخت',
+							'icon'	=> ' icon-mergethree',
+							'url'	=> 'cp.pay.gateways'
 						)						
 	 
 						
