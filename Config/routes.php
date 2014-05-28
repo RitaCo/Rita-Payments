@@ -11,7 +11,7 @@ if (RitaRouter::isStation('admin')) {
 		array( 'plugin' => 'Payments','controller' => 'Payments', 'action' => 'index'),
 		array( 
 			'alias' => 'cp.pay',
-			'parent' => 'rita'
+			'parent' => 'cp.rita'
 		)
 	);
 
