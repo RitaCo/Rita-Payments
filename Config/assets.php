@@ -16,7 +16,7 @@ return[
 		'style' => [	
 			'lt' => [
 
-				'Payments.Payments'
+			//	'Payments.Payments'
 			],
 			'lb' => [],
 			'ct' => [],
